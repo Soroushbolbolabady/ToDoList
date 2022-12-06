@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>Delete Task</title>
+    <link rel="stylesheet" href="{% static 'tasks/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasks/css/bootstrap.css' %}"></head>
+<body>
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <div class="form-group">
+        {{ form }}
+    </div>
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>
+
+</body>
+</html>

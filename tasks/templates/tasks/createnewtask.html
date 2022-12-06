@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html' %}
+{% block head %}
+    <title>CreateNewTask</title>
+{% endblock%}
+<body>
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        <input class="form-control" type="text" name="task" id="task">
+        <label for="task">Task</label>
+    </div>
+    <button type="submit"  class="btn btn-primary"> Save </button>
+</form>
+{% endblock %}
+</body>
+<

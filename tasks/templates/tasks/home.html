@@ -1,0 +1,18 @@
+{% extends 'tasks/base.html' %}
+<head>
+    {% block head %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% if request.user.is_authenticated %}
+        <h1>Your Tasks are <a href="{% url 'tasks:task_list' %}" >here</a></h1>
+    {% else %}
+    <h1>
+        Welcome to SachDO,getting <a href="{% url 'accounts:signin' %}" >Start</a>
+    </h1>
+    {% endif %}
+    {% endblock %}
+</body>
+</html>

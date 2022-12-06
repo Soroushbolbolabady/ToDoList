@@ -1,0 +1,26 @@
+{% extends 'tasks/base.html' %}
+
+    {%block head %}
+    <title>Do It</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% if tasks %}
+    <ul>
+        {% for object in tasks %}
+        <a href="{% url 'tasks:deletetask' object.pk %}">
+        <li>
+            {{ object.task}}
+
+        </li>
+        </a>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h5>You dont have any task , <a href="{% url 'tasks:createnewtask' %}">Crete</a> here</h5>
+    {% endif %}
+    {% endblock %}
+
+</body>
+</html>
