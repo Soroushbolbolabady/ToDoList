@@ -3,4 +3,4 @@ from tasks.models import Tasks
 
 
 class TaskSerializer(serializers.Serializer):
-    user = 
+    pass
