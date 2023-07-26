@@ -23,6 +23,6 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path('', include('tasks.urls')),
     path('api-auth/', include('rest_framework.urls')),
-    path("api/v1/" , include('api.urls'))
+    path("api/" , include('api.urls'))
 
 ]
